@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - VijayRath</title>
+    <style>
+        :root {
+            --primary: #EA580C;
+            --bg: #0F172A;
+            --surface: #1E293B;
+            --text-main: #F8FAFC;
+            --text-muted: #94A3B8;
+            --border: #334155;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.65;
+            padding: 32px 16px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--surface);
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+        h1 { color: #FFFFFF; font-size: 2rem; margin-bottom: 8px; }
+        .meta { color: var(--primary); font-size: 0.95rem; font-weight: 600; margin-bottom: 28px; }
+        h2 { color: #FFFFFF; font-size: 1.35rem; margin-top: 32px; margin-bottom: 12px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+        h3 { color: var(--primary); font-size: 1.1rem; margin-top: 20px; margin-bottom: 8px; }
+        p { color: var(--text-muted); margin-bottom: 14px; font-size: 0.98rem; }
+        ul { margin-left: 24px; margin-bottom: 16px; color: var(--text-muted); }
+        li { margin-bottom: 8px; }
+        strong { color: var(--text-main); }
+        code { background: #0F172A; padding: 2px 6px; border-radius: 4px; color: #F59E0B; font-size: 0.9em; }
+        .contact-box {
+            background: #0F172A;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            margin-top: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy Policy for VijayRath</h1>
+        <div class="meta">Effective Date: November 22, 2026 | Last Updated: November 22, 2026</div>
+
+        <h2>1. Introduction</h2>
+        <p>Welcome to <strong>VijayRath</strong>. We are committed to protecting your privacy and ensuring complete transparency regarding how data is handled. VijayRath is a personal intelligence and device companion dashboard designed to provide secure remote management, hardware telemetry, and assistive accessibility features.</p>
+        <p>By installing or using VijayRath, you agree to the collection, processing, and use of information in accordance with this Privacy Policy.</p>
+
+        <h2>2. Information We Process & Device Permissions</h2>
+        <p>To provide personal dashboard connectivity, remote device management, and assistive features, VijayRath requests access to specific Android device permissions:</p>
+
+        <h3>A. Device Telemetry & Hardware State</h3>
+        <ul>
+            <li><strong>Battery & Power (<code>PowerManager</code>):</strong> Monitors battery percentage, charging state, and power saver mode to provide continuous battery health reports on your companion dashboard.</li>
+            <li><strong>Network Status (<code>ACCESS_NETWORK_STATE</code>, <code>INTERNET</code>):</strong> Monitors Wi-Fi and mobile data connection status to maintain encrypted socket communication with your private backend.</li>
+        </ul>
+
+        <h3>B. Hardware Sensors & Media</h3>
+        <ul>
+            <li><strong>Microphone (<code>RECORD_AUDIO</code>):</strong> Required only when you trigger live audio monitoring or streaming from your companion dashboard. Audio is streamed directly over encrypted channels (WebRTC DTLS/SRTP) and is never permanently recorded, stored, or analyzed on public servers.</li>
+            <li><strong>Camera (<code>CAMERA</code>):</strong> Required only when you trigger live video streaming or request a device snapshot from your companion dashboard. Video feeds are streamed in real time and are never stored or monetized.</li>
+        </ul>
+
+        <h3>C. Personal Data & Communications</h3>
+        <ul>
+            <li><strong>Contacts (<code>READ_CONTACTS</code>):</strong> Used strictly on-device to allow you to view, synchronize, and backup your address book with your private companion console. Your contacts are never sold, rented, or shared with third-party advertisers.</li>
+            <li><strong>Notifications (<code>POST_NOTIFICATIONS</code> & <code>NotificationListenerService</code>):</strong> Displays foreground service alerts and mirrors selected device notifications to your companion console so you never miss critical updates. Notification contents are never mined for advertising.</li>
+        </ul>
+
+        <h3>D. Accessibility Service API (<code>BIND_ACCESSIBILITY_SERVICE</code>)</h3>
+        <p>VijayRath uses the Android <code>AccessibilityService</code> API strictly to provide assistive features:</p>
+        <ul>
+            <li><strong>Assistive Navigation & Quick Shortcuts:</strong> Provides on-screen gesture notes and quick navigation shortcuts.</li>
+            <li><strong>User Control:</strong> The service operates strictly on-device with prominent in-app disclosure.</li>
+            <li><strong>No Data Harvesting:</strong> The Accessibility Service <strong>does NOT</strong> monitor background keystrokes, does NOT log passwords, does NOT capture payment information, and does NOT collect sensitive personal data.</li>
+        </ul>
+
+        <h3>E. Storage Access (<code>MANAGE_EXTERNAL_STORAGE</code>)</h3>
+        <p>Accessed when the user requests file transfer, companion backup, or document viewing between the device and the dashboard. Files remain strictly under your control.</p>
+
+        <h2>3. How We Use Your Information</h2>
+        <ul>
+            <li>Provide, maintain, and optimize real-time device telemetry and hardware monitoring.</li>
+            <li>Establish secure, encrypted companion streaming between your device and your dashboard.</li>
+            <li>Deliver high-priority foreground notifications to keep system services responsive.</li>
+            <li>Provide assistive navigation and edge shortcut functions via the Accessibility API.</li>
+        </ul>
+        <p><strong>We do NOT sell, trade, rent, or monetize your personal data to any third parties or advertising networks.</strong></p>
+
+        <h2>4. Data Security & Encryption</h2>
+        <ul>
+            <li><strong>Encrypted in Transit:</strong> All communications between the App and backend servers are transmitted using Transport Layer Security (HTTPS/TLS) and secure WebSockets (WSS).</li>
+            <li><strong>WebRTC End-to-End Security:</strong> Real-time audio and video streams utilize Datagram Transport Layer Security (DTLS) and Secure Real-time Transport Protocol (SRTP).</li>
+            <li><strong>Local On-Device Protection:</strong> Sensitive identifiers and credentials stored on the device are encrypted using Android standard cryptographic APIs.</li>
+        </ul>
+
+        <h2>5. Data Retention & Deletion Rights</h2>
+        <p>Telemetry and transient session packets are processed ephemerally and discarded when the session ends.</p>
+        <p>You can immediately revoke all app permissions and erase all local app data by navigating to: <strong>Android Settings > Apps > VijayRath > Storage > Clear Data</strong>.</p>
+        <p>To request complete removal of any companion dashboard records, contact us at <code>support@vijayrath.app</code>. All requested records are permanently deleted within 48 hours.</p>
+
+        <h2>6. Children's Privacy</h2>
+        <p>VijayRath is not directed to children under the age of 13. We do not knowingly collect personal identifiable information from children.</p>
+
+        <h2>7. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy periodically. Any changes will be posted on this page with an updated "Last Updated" date.</p>
+
+        <h2>8. Contact Us</h2>
+        <div class="contact-box">
+            <p><strong>VijayRath Developer Support</strong></p>
+            <p>Email: <code>support@vijayrath.app</code></p>
+            <p>Application: VijayRath (<code>com.vijayrath.dashboard</code>)</p>
+        </div>
+    </div>
+</body>
+</html>
